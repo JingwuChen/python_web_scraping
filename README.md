@@ -1,0 +1,2 @@
+# python_web_scraping
+本文采用beautifulsoup和正则表达式进行网页爬虫
