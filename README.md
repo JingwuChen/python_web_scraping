@@ -55,6 +55,6 @@ soup.select("p > #link1")
 soup.select("body > a")
 # []
 ```
-        正则表达式直接查找解析过的网页内容
+##正则表达式直接查找解析过的网页内容
 
 虽然掌握起来较难，但是胜在更灵活。当然作为编程者，不管是学什么语言，都需掌握正则表达式，python正则式可以参考[这篇文章](https://www.cnblogs.com/wxshi/p/6827056.html)，在线测试正则表达式见[这个网址](https://regexr.com/)
