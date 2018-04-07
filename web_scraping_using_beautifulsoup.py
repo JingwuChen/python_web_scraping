@@ -6,7 +6,7 @@ import time
 
 
 headers={'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36'}
-#获取豆瓣每个页面的链接
+#获取58同城每个页面的链接
 def get_every_page(start,end):
     time.sleep(2)
     bigurls=[]
@@ -14,7 +14,7 @@ def get_every_page(start,end):
         bigurls.append('http://cc.58.com/iphonesj/pn{}/'.format(str(i)))
     return bigurls
 
-#获取每部电影的页面链接
+#获取每件商品的详情链接
 def get_link(url):
     time.sleep(2)
     urls=[]
@@ -24,7 +24,7 @@ def get_link(url):
     for link in links:
         urls.append(link.get('href'))
     return urls
-#获取单部电影中导演，编剧，演员，发行日期，类型，评分
+#获取每部商品的描述，定价，地点，以及标签
 def get_content(url):
     web_data=requests.get(url,headers=headers)#对网页进行解析
     soup=bs(web_data.text,'lxml')
