@@ -17,7 +17,7 @@ def get_link(start,end):
         url='https://movie.douban.com/j/search_subjects?type=movie&tag=%E5%8D%8E%E8%AF%AD&sort=recommend&page_limit=20&page_start={}'.format(str(i))
         urls.append(url)
     return urls
-#获取每部电影的页面链接
+#获取每部电影的详情页面链接
 def get_page(url):
     web_data = requests.get(url, headers=headers)#对网页进行解析
     s1 = json.loads(web_data.content)
